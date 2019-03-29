@@ -18,6 +18,4 @@ void ConsoleRenderer::Draw()
 		}
 		std::cout << std::endl;
 	}
-	std::cout << Game::_antX << std::endl;;
-	std::cout << Game::_antY << std::endl;;
 }

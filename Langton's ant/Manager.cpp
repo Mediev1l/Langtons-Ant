@@ -1,7 +1,7 @@
 #include "Manager.h"
 
 Manager::Manager()
-	: _Cells(nullptr), _width(0), _height(0), _dir(Direction::RIGHT), _antX(2), _antY(2)
+	: _Cells(nullptr), _width(0), _height(0), _dir(Direction::UP), _antX(1), _antY(1)
 {
 }
 
@@ -72,26 +72,26 @@ void Manager::turn()
 	{
 		case UP:
 		{
-			move(_antX += 1, _antY);
-			_dir = RIGHT;
+			move(_antX, _antY -= 1);
+			//_dir = RIGHT;
 			break;
 		}
 		case RIGHT:
 		{
-			move(_antX, _antY += 1);
-			_dir = DOWN;
+			move(_antX += 1, _antY);
+			//_dir = DOWN;
 			break;
 		}
 		case DOWN:
 		{
-			move(_antX -= 1, _antY);
-			_dir = LEFT;
+			move(_antX, _antY += 1);
+			//_dir = LEFT;
 			break;
 		}
 		case LEFT:
 		{
-			move(_antX, _antY -= 1);
-			_dir = RIGHT;
+			move(_antX -= 1, _antY);
+			//_dir = RIGHT;
 			break;
 		}
 	}
@@ -99,10 +99,10 @@ void Manager::turn()
 
 void Manager::move(size_t x, size_t y)
 {
-	x > _width - 1 ? _antX = 1 : x;
+	x > _width - 2 ? _antX = 1 : x;
 	x < 1 ? _antX = _width - 2 : x;
 
-	y > _height - 1 ? _antY = 1 : y;
+	y > _height - 2 ? _antY = 1 : y;
 	y < 1 ? _antY = _height - 2 : y;
 
 }
@@ -132,7 +132,7 @@ void Manager::analize()
 	else
 	{
 		_Cells[_antX][_antY].setVisit(false);
-		_dir = static_cast<Direction>((_dir + 2) % LAST);
+		_dir = static_cast<Direction>((_dir + 3) % LAST);
 	}
 }
 
