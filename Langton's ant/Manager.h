@@ -41,10 +41,8 @@ public:
 	void move(size_t x, size_t y);
 	void analize();
 
-
 	size_t getWidth();
 	size_t getHeight();
-
 
 	Cell getCell(size_t x, size_t y);
 };

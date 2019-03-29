@@ -73,25 +73,21 @@ void Manager::turn()
 		case UP:
 		{
 			move(_antX, _antY -= 1);
-			//_dir = RIGHT;
 			break;
 		}
 		case RIGHT:
 		{
 			move(_antX += 1, _antY);
-			//_dir = DOWN;
 			break;
 		}
 		case DOWN:
 		{
 			move(_antX, _antY += 1);
-			//_dir = LEFT;
 			break;
 		}
 		case LEFT:
 		{
 			move(_antX -= 1, _antY);
-			//_dir = RIGHT;
 			break;
 		}
 	}
