@@ -25,7 +25,7 @@ void Game::Start()
 		Draw();
 		Game::analize();
 		Game::turn();
-		Sleep(1000);
+		Sleep(100);
 	}
 
 

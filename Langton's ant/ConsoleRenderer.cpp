@@ -6,7 +6,7 @@ void ConsoleRenderer::Draw()
 	{
 		for (int j = 0; j < Game::_width; j++)
 		{
-			if (i == Game::_antX && j == Game::_antY)
+			if (j == Game::_antX && i == Game::_antY)
 				std::cout << "x";
 			else if (i == 0 || i == Game::_height - 1 || j == 0 || j == Game::_width - 1)
 				std::cout << "#";
@@ -18,4 +18,6 @@ void ConsoleRenderer::Draw()
 		}
 		std::cout << std::endl;
 	}
+	std::cout << Game::_antX << std::endl;;
+	std::cout << Game::_antY << std::endl;;
 }

@@ -100,10 +100,10 @@ void Manager::turn()
 void Manager::move(size_t x, size_t y)
 {
 	x > _width - 1 ? _antX = 1 : x;
-	x < 1 ? _antX = _width - 1 : x;
+	x < 1 ? _antX = _width - 2 : x;
 
 	y > _height - 1 ? _antY = 1 : y;
-	y < 1 ? _antY = _height - 1 : y;
+	y < 1 ? _antY = _height - 2 : y;
 
 }
 
