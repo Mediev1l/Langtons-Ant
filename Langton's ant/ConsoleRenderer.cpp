@@ -2,7 +2,8 @@
 
 void ConsoleRenderer::Draw()
 {
-	SetConsoleCursorPosition(Game::getHandle(), COORD{ 0,0 });
+
+	SetConsoleCursorPosition(hndl, COORD{ 0,0 });
 
 	for (size_t i = 0; i < Game::_height; i++)
 	{
@@ -20,4 +21,6 @@ void ConsoleRenderer::Draw()
 		}
 		std::cout << std::endl;
 	}
+
+	Sleep(500);
 }
