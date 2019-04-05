@@ -2,6 +2,7 @@
 
 Game::Game()
 {
+	hndl = GetStdHandle(STD_OUTPUT_HANDLE);
 }
 
 void Game::Start()
@@ -10,11 +11,10 @@ void Game::Start()
 
 	while (1)
 	{
-		system("cls");
 		Draw();
 		Game::analize();
 		Game::turn();
-		Sleep(1000);
+		Sleep(500);
 	}
 
 }

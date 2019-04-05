@@ -6,10 +6,14 @@
 
 class Game : public Manager
 {
+protected:
+	HANDLE hndl;
 public:
 	Game();
 
 	void Start();
+
+	HANDLE getHandle() { return hndl; };
 
 	virtual void Draw() = 0;
 };

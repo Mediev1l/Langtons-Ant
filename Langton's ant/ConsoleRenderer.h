@@ -8,7 +8,8 @@ class ConsoleRenderer : public Game
 {
 public:
 
-	ConsoleRenderer() : Game() {}
+	ConsoleRenderer() : Game() {};
+
 	void Draw() override;
 
 };
